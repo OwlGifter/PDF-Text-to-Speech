@@ -8,7 +8,7 @@ import os
 import tempfile
 
 
-
+#method to turn text to mp3 file and play it, then delete it after playthrough
 def speak_text(text, lang='en'):
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
         tts = gTTS(text=text, lang=lang)
