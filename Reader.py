@@ -2,8 +2,10 @@
 import PyPDF2 
 import pyttsx3 
 
-# path of the PDF file 
-path = open('./book.pdf', 'rb') #./Small Projects/PDF Text to Speech/
+# path of the PDF file
+path = input('Path to pdf file(respond "default" to select book.pdf next to python file): ')
+if path == "default" :
+    path = open('./book.pdf', 'rb')
 
 # creating a PdfFileReader object 
 pdfReader = PyPDF2.PdfReader(path) 
